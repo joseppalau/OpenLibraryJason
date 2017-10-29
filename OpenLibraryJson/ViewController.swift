@@ -76,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
                         let dic = dic3[i] as! NSDictionary
                         autor = dic["name"] as! NSString as String
-                        listadoAutores += autor
+                        listadoAutores += "\(autor) "
                     }
                 
                 self.autoresText.text = listadoAutores
