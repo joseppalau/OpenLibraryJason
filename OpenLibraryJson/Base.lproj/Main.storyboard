@@ -124,6 +124,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay portada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFB-rf-t8g">
+                                <rect key="frame" x="87.5" y="487" width="200" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="RLb-xy-UIo"/>
+                                    <constraint firstAttribute="width" constant="200" id="kfQ-wO-BFp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -143,8 +153,10 @@
                             <constraint firstItem="D0i-dN-CmF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="gke-GT-Eph"/>
                             <constraint firstItem="vFL-be-5Bg" firstAttribute="top" secondItem="8qW-Sw-vMM" secondAttribute="bottom" constant="30" id="kUg-eU-onc"/>
                             <constraint firstItem="8qW-Sw-vMM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kmV-ru-QpH"/>
+                            <constraint firstItem="fFB-rf-t8g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ns5-bJ-uuJ"/>
                             <constraint firstItem="9Hw-fx-mIY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="pga-bK-pbJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HON-HO-VXC" secondAttribute="trailing" id="r8u-oO-cPO"/>
+                            <constraint firstItem="9Hw-fx-mIY" firstAttribute="top" secondItem="fFB-rf-t8g" secondAttribute="bottom" constant="120" id="yh3-QF-mDk"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTapWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="8eG-s2-TgT"/>
@@ -154,6 +166,7 @@
                         <outlet property="autoresText" destination="mSQ-Bk-3IH" id="Sn8-3A-cWX"/>
                         <outlet property="estado" destination="9Hw-fx-mIY" id="FqD-Kb-1Aj"/>
                         <outlet property="imagenPortada" destination="kP3-Hb-t5j" id="G72-tP-soO"/>
+                        <outlet property="noHayPortadaLbl" destination="fFB-rf-t8g" id="ICd-g4-27P"/>
                         <outlet property="numISBN" destination="8qW-Sw-vMM" id="zEZ-Vc-x3g"/>
                         <outlet property="tituloText" destination="5OQ-kz-Hl5" id="hcr-qs-TrU"/>
                     </connections>

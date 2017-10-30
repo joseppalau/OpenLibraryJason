@@ -20,6 +20,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var estado: UILabel!
     
+    @IBOutlet weak var noHayPortadaLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,6 +83,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     }
                 
                 self.autoresText.text = listadoAutores
+                
+                if dic2["cover"] != nil {
+                    
                 let dic4 = dic2["cover"] as! NSDictionary
                 let dic5 = dic4["large"] as! NSString as String
                 
@@ -89,13 +95,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let imagen = UIImage(data: datos2! as Data)
                 imagenPortada.image = imagen
                 
+                }
+                else {
+                    
+                    self.noHayPortadaLbl.isHidden = false
+                    
+                }
+               
+                
                 estado.backgroundColor = UIColor(red: 94/255, green: 173/255, blue: 53/255, alpha: 1)
                 estado.text = "Conexión Correcta"
+                
+            }
+            
+            catch {
             
             }
-            catch  {
-            
-            }
+        
         }
         else {
             estado.backgroundColor = UIColor(red: 170/255, green: 39/255, blue: 59/255, alpha: 1)
